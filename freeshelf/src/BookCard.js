@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import './styles.css'
+import 'bulma/css/bulma.min.css';
+
 
 // todo for today
 // need to add null images and information for when there is nothing provide
@@ -9,18 +12,21 @@ const BookCard = (props) => {
     const {book} = props
     const [isExpanded, setIsExpanded] = useState(false)
     return (
+    <div class="box">
     <>
-        <h2>{book.title}</h2>
-        <p>{book.author}</p>
+        <h3 class="title is-3">{book.title}</h3>
+        <h5 class="subtitle is-5">{book.author}</h5>
         <p>{book.shortDescription}</p>
-        <img src={book.coverImageUrl} alt={book.shortDescription}></img>
-        <button onClick={() => { 
+        <figure class="image is-128x128">
+        <img class="is-square" src={book.coverImageUrl} alt={book.shortDescription}></img>
+        </figure>
+        <i class="fas fa-solid fa-caret-right" onClick={() => { 
             setIsExpanded(!isExpanded);
             console.log("button clicked!")
         }}
         >
         More Information
-        </button>
+        </i>
         {isExpanded && (
         <>
             <p>URL: {book.url}</p>
@@ -31,6 +37,7 @@ const BookCard = (props) => {
         
         )}
     </>
+    </div>
     );
 };
 
