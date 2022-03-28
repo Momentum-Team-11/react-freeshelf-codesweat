@@ -36,7 +36,7 @@ const BookCard = (props) => {
     return (
     <div className="flex-container box is-flex justify-content align-content is-align-items-space-evenly">
         <div>
-        <h3 className="title is-3">{book.title}</h3>
+        <h4 className="title is-4">{book.title}</h4>
         <h5 className="subtitle is-5">{book.author}</h5>
         <p>{book.shortDescription}</p>
         <a onClick={() => { 
