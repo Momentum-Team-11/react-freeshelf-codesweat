@@ -9,7 +9,7 @@ function App () {
     <div>
         {books.map((book)=> {
             return (
-                <BookCard book={book}/>
+                <BookCard book={book} key={book.url}/>
             )
         })}
     </div>

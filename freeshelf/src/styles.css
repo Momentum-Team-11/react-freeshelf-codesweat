@@ -1,8 +1,20 @@
 body {
-  background-color: #d29668ad;
-  color: white;
-  padding: 40px;
-  font-family: Arial;
-  text-align: center;
+    background-color: #d29668ad;
 }
+.flex-container {
+    display: flex;
+    flex-wrap:unset
+}
+
+.BookCard {
+    display: flex;
+}
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    
+};
 
